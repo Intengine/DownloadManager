@@ -1,6 +1,6 @@
 ﻿namespace DownloadManager
 {
-    partial class Form1
+    partial class formMain
     {
         /// <summary>
         /// Wymagana zmienna projektanta.

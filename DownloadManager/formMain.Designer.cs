@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsAddUrl = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsRemove = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsSettings = new System.Windows.Forms.ToolStripButton();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,28 +53,6 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // listView1
-            // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(0, 80);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(800, 370);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 80);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 80);
-            // 
             // tsAddUrl
             // 
             this.tsAddUrl.AutoSize = false;
@@ -85,6 +63,11 @@
             this.tsAddUrl.Size = new System.Drawing.Size(75, 75);
             this.tsAddUrl.Text = "Add URL";
             this.tsAddUrl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 80);
             // 
             // tsRemove
             // 
@@ -97,6 +80,11 @@
             this.tsRemove.Text = "Remove";
             this.tsRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 80);
+            // 
             // tsSettings
             // 
             this.tsSettings.AutoSize = false;
@@ -107,15 +95,28 @@
             this.tsSettings.Size = new System.Drawing.Size(75, 75);
             this.tsSettings.Text = "Settings";
             this.tsSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsSettings.Click += new System.EventHandler(this.tsSettings_Click);
             // 
-            // Form1
+            // listView1
+            // 
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(0, 80);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(800, 370);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Form1";
+            this.Name = "formMain";
             this.Text = "DownloadManager";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

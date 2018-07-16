@@ -15,5 +15,13 @@ namespace DownloadManager
         {
             InitializeComponent();
         }
+
+        private void tsSettings_Click(object sender, EventArgs e)
+        {
+            using (formSettings frm = new formSettings())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

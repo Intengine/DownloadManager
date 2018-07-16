@@ -96,6 +96,7 @@
             this.btnStop.TabIndex = 6;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnStart
             // 
@@ -105,6 +106,7 @@
             this.btnStart.TabIndex = 7;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnBrowse
             // 
@@ -114,6 +116,7 @@
             this.btnBrowse.TabIndex = 8;
             this.btnBrowse.Text = "...";
             this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // formDownload
             // 
@@ -129,8 +132,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "formDownload";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Download";
+            this.Load += new System.EventHandler(this.formDownload_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -19,6 +19,11 @@ namespace DownloadManager
             }
         }
 
+        private void tsLogo_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.intengine.pl");
+        }
+
         private void tsAddUrl_Click(object sender, EventArgs e)
         {
             using(formAddUrl form = new formAddUrl())

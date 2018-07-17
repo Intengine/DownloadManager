@@ -35,6 +35,11 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsSettings = new System.Windows.Forms.ToolStripButton();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +68,7 @@
             this.tsAddUrl.Size = new System.Drawing.Size(75, 75);
             this.tsAddUrl.Text = "Add URL";
             this.tsAddUrl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsAddUrl.Click += new System.EventHandler(this.tsAddUrl_Click);
             // 
             // toolStripSeparator1
             // 
@@ -79,6 +85,7 @@
             this.tsRemove.Size = new System.Drawing.Size(75, 75);
             this.tsRemove.Text = "Remove";
             this.tsRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsRemove.Click += new System.EventHandler(this.tsRemove_Click);
             // 
             // toolStripSeparator2
             // 
@@ -99,6 +106,12 @@
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
@@ -109,6 +122,30 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "#";
+            this.columnHeader1.Width = 37;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "URL";
+            this.columnHeader2.Width = 432;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "File Name";
+            this.columnHeader3.Width = 155;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Size";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Date Time";
+            this.columnHeader5.Width = 120;
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +155,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "formMain";
             this.Text = "DownloadManager";
+            this.Load += new System.EventHandler(this.formMain_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -125,14 +163,18 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ToolStripButton tsAddUrl;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton tsRemove;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton tsSettings;
+        public System.Windows.Forms.ToolStrip toolStrip1;
+        public System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
 

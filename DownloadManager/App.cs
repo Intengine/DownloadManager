@@ -9,9 +9,10 @@ namespace DownloadManager
     {
         static Database database;
 
-        public static Database DB()
+        public static Database DB
         {
-            get {
+            get
+            {
                 if (database == null)
                     database = new Database();
                 return database;

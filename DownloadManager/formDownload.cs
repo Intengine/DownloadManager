@@ -58,6 +58,7 @@ namespace DownloadManager
             client.DownloadProgressChanged += Client_DownloadProgressChanged;
             client.DownloadFileCompleted += Client_DownloadFileCompleted;
             txtAddress.Text = Url;
+            txtPath.Text = Properties.Settings.Default.Path;
         }
 
         private void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
@@ -69,7 +70,7 @@ namespace DownloadManager
             row.FileSize = (string.Format("{0.0.##} kb", FileSize / 1024));
             row.DateTime = DateTime.Now;
 
-            App.DB.Files.NewFilesRow(row);
+            App.DB.Files.AddFilesRow(row);
             App.DB.AcceptChanges();
             App.DB.WriteXml(string.Format("{0}/data.dat", Application.StartupPath));
 

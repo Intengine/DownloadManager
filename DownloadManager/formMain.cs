@@ -49,7 +49,7 @@ namespace DownloadManager
                     listView1.Items[item.Index].Remove();
                 }
                 App.DB.AcceptChanges();
-                App.DB.WriteXML(string.Format("{0}/data.dat", Application.StartupPath));
+                App.DB.WriteXml(string.Format("{0}/data.dat", Application.StartupPath));
             }
         }
 

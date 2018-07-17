@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DownloadManager
@@ -67,7 +62,7 @@ namespace DownloadManager
 
             row.URL = Url;
             row.FileName = FileName;
-            row.FileSize = (string.Format("{0.0.##} kb", FileSize / 1024));
+            row.FileSize = (string.Format("{0:0.##} kb", FileSize / 1024));
             row.DateTime = DateTime.Now;
 
             App.DB.Files.AddFilesRow(row);
@@ -88,6 +83,7 @@ namespace DownloadManager
         private void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             progressBar.Minimum = 0;
+            progressBar.Maximum = 100;
             double recieve = double.Parse(e.BytesReceived.ToString());
             FileSize = double.Parse(e.TotalBytesToReceive.ToString());
             Percentage = recieve / FileSize * 100;

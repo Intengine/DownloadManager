@@ -1,6 +1,6 @@
 ﻿namespace DownloadManager
 {
-    partial class formAddUrl
+    partial class FormAddUrl
     {
         /// <summary>
         /// Required designer variable.

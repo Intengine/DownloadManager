@@ -1,6 +1,6 @@
 ﻿namespace DownloadManager
 {
-    partial class formDownload
+    partial class FormDownload
     {
         /// <summary>
         /// Required designer variable.

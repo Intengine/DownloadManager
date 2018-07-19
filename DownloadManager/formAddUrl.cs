@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace DownloadManager
 {
-    public partial class formAddUrl : Form
+    public partial class FormAddUrl : Form
     {
-        public formAddUrl()
+        public FormAddUrl()
         {
             InitializeComponent();
         }

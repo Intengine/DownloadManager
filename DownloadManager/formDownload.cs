@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace DownloadManager
 {
-    public partial class formDownload : Form
+    public partial class FormDownload : Form
     {
-        public formDownload(formMain frm)
+        public FormDownload(FormMain frm)
         {
             InitializeComponent();
             _frmMain = frm;
@@ -40,7 +40,7 @@ namespace DownloadManager
 
         WebClient client;
 
-        private formMain _frmMain;
+        private FormMain _frmMain;
 
         public string Url { get; set; }
         public string FileName { get; set; }

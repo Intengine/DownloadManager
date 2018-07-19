@@ -4,16 +4,16 @@ using System.Windows.Forms;
 
 namespace DownloadManager
 {
-    public partial class formMain : Form
+    public partial class FormMain : Form
     {
-        public formMain()
+        public FormMain()
         {
             InitializeComponent();
         }
 
         private void tsSettings_Click(object sender, EventArgs e)
         {
-            using (formSettings form = new formSettings())
+            using (FormSettings form = new FormSettings())
             {
                 form.ShowDialog();
             }
@@ -26,11 +26,11 @@ namespace DownloadManager
 
         private void tsAddUrl_Click(object sender, EventArgs e)
         {
-            using(formAddUrl form = new formAddUrl())
+            using(FormAddUrl form = new FormAddUrl())
             {
                 if(form.ShowDialog() == DialogResult.OK)
                 {
-                    formDownload formDownload = new formDownload(this);
+                    FormDownload formDownload = new FormDownload(this);
                     formDownload.Url = form.Url;
                     formDownload.Show();
                 }

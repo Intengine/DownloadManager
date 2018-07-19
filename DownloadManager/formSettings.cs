@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace DownloadManager
 {
-    public partial class formSettings : Form
+    public partial class FormSettings : Form
     {
-        public formSettings()
+        public FormSettings()
         {
             InitializeComponent();
         }

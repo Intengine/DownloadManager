@@ -1,6 +1,6 @@
 ﻿namespace DownloadManager
 {
-    partial class formSettings
+    partial class FormSettings
     {
         /// <summary>
         /// Required designer variable.

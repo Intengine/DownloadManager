@@ -21,7 +21,7 @@ namespace DownloadManager
 
         private void tsLogo_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.intengine.pl");
+            System.Diagnostics.Process.Start("http://www.intengine.beskidy.pl");
         }
 
         private void tsAddUrl_Click(object sender, EventArgs e)
